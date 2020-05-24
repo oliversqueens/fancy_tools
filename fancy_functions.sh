@@ -2,10 +2,11 @@
 
 gco ()
 {
-	if [ -d .git ]; then 
+	if [ -d .git ]
+	then 
 		branch="$(git rev-parse --abbrev-ref HEAD)"
 
-		echo"[+]branch $branch"
+		echo "[+]branch $branch"
 
 		git commit -m"[$branch] $*"
 
@@ -13,7 +14,7 @@ gco ()
 
 	else
 
-  		echo "[-]erreur!ce dossier n'est pas un dossier git";
+  		echo "[-]erreur!ce dossier n'est pas un dossier git"
 
 	fi;
 	
